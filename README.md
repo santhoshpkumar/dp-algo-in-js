@@ -1,5 +1,5 @@
 # dp-algo-in-js
-Algorithm: Dynamic Programming using JavaScript
+## Algorithm: Dynamic Programming using JavaScript
 
 This project is a collection of problem's that can be solved using dynamic programming approach implemented in
 JavaScript.
