@@ -4,6 +4,7 @@
 
 var util = require("./util");
 
+//Pre-req : the coin array should be sorted in ascending order for the algorithm to work.
 var coinChangeNoOfWays = function(coins,n){
     var resultMatrix = [];
 

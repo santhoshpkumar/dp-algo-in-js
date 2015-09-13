@@ -4,9 +4,16 @@
 
 var coinChangeMinNumOfCoins =  require("./coinchangeminimum");
 var coinChangeNoOfWays =  require("./coinchangeways");
+var util = require("./util");
 
-var coins = [1,2,5,10];
-var changeNeededFor = 10;
+//Pre-req : the coin array should be sorted in ascending order for the algorithm to work.
+//var coins = [1,2,5,10];
+// TODO : remove the duplicates from the array
+
+var coins = [2,5,3,6];
+// Util uses insertion sort to sort the given array
+coins = util.sort(coins);
+var changeNeededFor = 11;
 var answer, result;
 
 console.log("Coins: "+coins);

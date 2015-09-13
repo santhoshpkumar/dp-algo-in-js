@@ -45,5 +45,23 @@ module.exports = {
             result.push(row.slice());
         }
         return result;
+    },
+    /**
+     * Sort the array using insertion sort.
+     *
+     * @param  {Array} array on integers to sort
+     * @return {Array}
+     * Sorted Array
+     */
+    sort: function(arr) {
+        for (var i = 1; i < arr.length; i++) {
+            var cmpItm = arr[i];
+            var tempArr = arr.slice();
+            for (var j = i; j > 0 && cmpItm < arr[j - 1]; j--) {
+                arr[j] = arr[j - 1];
+            }
+            arr[j] = cmpItm;
+        }
+        return arr;
     }
 };
