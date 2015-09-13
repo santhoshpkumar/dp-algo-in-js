@@ -50,3 +50,13 @@ module.exports = {
 //console.log("Total number of ways to give change: "+result);
 //console.log("******** ****** ********");
 
+//Coins = [1,2,5];
+//Change for = 10
+//******** Matrix ********
+//[   [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+//    [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
+//    [ 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6 ],
+//    [ 1, 1, 2, 2, 3, 4, 5, 6, 7, 8, 10 ] ]
+//******** Result ********
+//Total number of ways to give change: 10
+//******** ****** ********

@@ -67,3 +67,15 @@ module.exports = {
 //console.log("******** ****** ********");
 //console.log(coinChange.getMinCoins());
 //console.log("******** ****** ********");
+
+//Coins = [1,2,4];
+//Change for: 9
+//[   [ 0, MAX, MAX, MAX, MAX, MAX, MAX, MAX, MAX, MAX ],
+//    [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+//    [ 0, 1, 1, 2, 2, 3, 3, 4, 4, 5 ],
+//    [ 0, 1, 1, 2, 1, 2, 2, 3, 2, 3 ] ]
+//******** Result ********
+//Minimum number of coins to give change: 3
+//******** ****** ********
+//[ 4, 4, 1 ]
+//******** ****** ********
