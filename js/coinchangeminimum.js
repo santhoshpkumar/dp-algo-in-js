@@ -10,7 +10,7 @@
 var util = require("./util");
 
 //Pre-req : the coin array should be sorted in ascending order for the algorithm to work.
-var coinChangeMinNum = function(coins,n){
+var CoinChangeMinNum = function(coins,n){
     var resultMatrix = [];
 
     this.findAnswer = function (){
@@ -56,7 +56,7 @@ var coinChangeMinNum = function(coins,n){
 };
 
 module.exports = {
-    problem: coinChangeMinNum
+    problem: CoinChangeMinNum
 };
 
 

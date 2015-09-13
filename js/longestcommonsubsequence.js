@@ -1,8 +1,9 @@
 /**
  * Created by santhoshkumar on 12/09/15.
  *
- *Problem: Given two sequence of integers, A=[a1,a2,…,an] and B=[b1,b2,…,bm],
- *         find the length of the longest common subsequence.
+ * Problem:
+ * Given two sequence of integers, A=[a1,a2,…,an] and B=[b1,b2,…,bm],
+ * find the length of the longest common subsequence.
  *
  * A subsequence is a sequence that can be derived from another sequence by deleting
  * some elements without changing the order of the remaining elements.
@@ -12,7 +13,7 @@
 
 var util = require("./util");
 
-var solveLCS = function(a,b) {
+var SolveLCS = function(a,b) {
     var lcs;
     var max = 0;
 
@@ -46,7 +47,7 @@ var a = ['s','a','n','t','h','o','s','h'];
 var b = ['s','a','n','2','o','s'];
 var i;
 
-var lcs = new solveLCS(a,b);
+var lcs = new SolveLCS(a,b);
 console.log("********** Result **********");
 console.log("Max Sub Sequence length: "+lcs.findMax());
 
