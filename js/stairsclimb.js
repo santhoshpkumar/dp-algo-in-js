@@ -12,5 +12,18 @@
  *
  */
 
+var ClimbStairs = function(stairsCount) {
+    var stairs = [];
 
+    stairs[0] = 0;
+    stairs[1] = 1; //Only one way to climb if only one step
+    stairs[2] = 2; //Two ways to climb: two 1 step or one 2 step
 
+    for (var i = 3; i <= stairsCount; i++) {
+        stairs.push(1+stairs[i - 1] + stairs[i - 2]+ stairs[i - 3]);
+    }
+    return stairs[stairsCount];
+};
+
+var numStairs = 4;
+console.log("No of ways to climb "+numStairs+" stairs: "+ClimbStairs(numStairs));
