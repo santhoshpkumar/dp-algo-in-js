@@ -63,5 +63,5 @@ var RodCutting = function(spotCost){
 
 var cost = [ 3 ,  5 ,  8 ,  9 , 10 , 17 , 17 , 20];
 var res = new RodCutting(cost);
-console.log("Maximum Value: "+res.findAnswer());
+console.log("Maximum profit: "+res.findAnswer());
 console.log(res.geCutPositions());
