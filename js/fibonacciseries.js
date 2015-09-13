@@ -12,11 +12,11 @@ var FibonacciSeries = function(count) {
     series[0] = 0;
     series[1] = 1;
 
-    for (var i = 2; i < count; i++) {
+    for (var i = 2; i <= count; i++) {
         series.push(series[i - 1] + series[i - 2]);
     }
     return series;
 };
 
-var seriesCount = 50;
+var seriesCount = 8;
 console.log(FibonacciSeries(seriesCount));
