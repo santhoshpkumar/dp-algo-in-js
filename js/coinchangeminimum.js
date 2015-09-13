@@ -32,6 +32,21 @@ var coinChangeMinNum = function(coins,n){
         return resultMatrix;
     };
 
+    this.getMinCoins = function(){
+        var i = coins.length,
+            j = n,
+            minCoins = [];
+        while(j !== 0 && i !== 0) {
+            if (resultMatrix[i][ j] !== resultMatrix[i - 1][ j]) {
+                minCoins.push(coins[i - 1]);
+                j -= coins[i-1];
+            }else{
+                i--;
+            }
+        }
+        return minCoins;
+    }
+
 };
 
 module.exports = {
@@ -40,7 +55,7 @@ module.exports = {
 
 
 //var coins = [1,2,4];
-//var n = 10;
+//var n = 9;
 //
 //var coinChange = new coinChangeMinNum(coins,n);
 //var result = coinChange.findAnswer();
@@ -49,4 +64,5 @@ module.exports = {
 //console.log("******** Result ********");
 //console.log("Minimum number of coins to give change: "+result);
 //console.log("******** ****** ********");
-
+//console.log(coinChange.getMinCoins());
+//console.log("******** ****** ********");
