@@ -1,5 +1,10 @@
 /**
  * Created by santhoshkumar on 13/09/15.
+ *
+ * Problem:
+ * Given coins of certain denominations and a total,
+ * how many minimum coins would you need to make this total.
+ *
  */
 
 var util = require("./util");

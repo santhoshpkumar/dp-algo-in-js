@@ -1,5 +1,14 @@
 /**
  * Created by santhoshkumar on 12/09/15.
+ *
+ * Problem: Given two sequence of integers, A=[a1,a2,…,an] and B=[b1,b2,…,bm],
+ *          find the length of the longest common substring.
+ *
+ * In computer science, the longest common substring problem is to find the longest string (or strings)
+ * that is a substring (or are substrings) of two or more strings.
+ * The longest common substring of the strings "ABABC", "BABCA" and "ABCBA" is string "ABC" of length 3.
+ * Other common substrings are "A", "AB", "B", "BA", "BC" and "C".
+ *
  */
 
 var util = require("./util");
