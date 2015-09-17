@@ -10,19 +10,20 @@
 var util = require("./util");
 
 //Pre-req : the coin array should be sorted in ascending order for the algorithm to work.
-var CoinChangeMinNum = function(coins,n){
+var CoinChangeMinNum = function(coins, n){
     var resultMatrix = [];
+    var resultCoins = [];
 
-    this.findAnswer = function (){
-        var i,j;
+    var generateMatrix = function(){
+        var i, j;
         resultMatrix = util.createArray(0,coins.length,n);
 
-        for(i=1;i<=n;i++){
+        for(i=1; i<=n; i++){
             resultMatrix[0][i] = Number.MAX_VALUE-2;
         }
 
         for(i=1;i<=coins.length;i++){
-            for(j=1;j<=n;j++){
+            for(j=1; j<=n; j++){
                 if (j >= coins[i-1]){
                     resultMatrix[i][j]=Math.min(resultMatrix[i-1][j],1+resultMatrix[i][j-coins[i-1]]);
                 }else{
@@ -30,27 +31,33 @@ var CoinChangeMinNum = function(coins,n){
                 }
             }
         }
-
-        return resultMatrix[coins.length][n];
     };
 
-    this.getMatrix = function(){
-        return resultMatrix;
-    };
-
-    this.getMinCoins = function(){
+    var findCoins = function(){
         var i = coins.length,
-            j = n,
-            minCoins = [];
+            j = n;
         while(j !== 0 && i !== 0) {
             if (resultMatrix[i][ j] !== resultMatrix[i - 1][ j]) {
-                minCoins.push(coins[i - 1]);
+                resultCoins.push(coins[i - 1]);
                 j -= coins[i-1];
             }else{
                 i--;
             }
         }
-        return minCoins;
+    };
+
+    this.findAnswer = function (){
+        generateMatrix();
+        findCoins();
+        return resultCoins.length;
+    };
+
+    this.getMatrix = function(){
+        return resultMatrix.slice(); // return a copy
+    };
+
+    this.getMinCoins = function(){
+        return resultCoins.slice(); // return a copy
     }
 
 };
