@@ -2,6 +2,7 @@
  * Created by santhoshkumar on 17/09/15.
  * 
  * Given an array of integers, find length of the largest subarray with sum equals to 0.
+ * Note: This does not fit into DP criteria
 
  Examples:
 

@@ -2,7 +2,7 @@
  * Created by santhoshkumar on 17/09/15.
  *
  * Find the sum of contiguous subarray within a one-dimensional array of numbers which has the largest sum.
- *
+ ** Note: This does not fit into DP criteria
 
  Kadane’s Algorithm:
 
