@@ -20,3 +20,5 @@ var FibonacciSeries = function(count) {
 
 var seriesCount = 8;
 console.log(FibonacciSeries(seriesCount));
+
+// Check the link for optimization technique : http://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
